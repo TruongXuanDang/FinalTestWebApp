@@ -17,6 +17,7 @@ namespace FinalTestWebApp.Controllers
         // GET: Products
         public ActionResult Index()
         {
+
             var products = db.Products.Include(p => p.Category);
             return View(products.ToList());
         }
